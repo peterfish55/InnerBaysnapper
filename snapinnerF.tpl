@@ -39,7 +39,7 @@ DATA_SECTION
   init_vector WtM(fage,lage)
   init_vector OCat(fyear,pyear)
   init_vector OCatSD(fyear,pyear)
-  init_number Ndepm
+  ini  t_number Ndepm
   init_vector lowDEPM(dyear,lyear)
   init_vector DEPM(dyear,lyear)
   init_vector uppDEPM(dyear,lyear)

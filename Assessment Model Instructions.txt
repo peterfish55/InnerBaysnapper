@@ -1,0 +1,22 @@
+Inner Gulf Assessment models
+
+The necessary steps are:
+1. Pull down the files to c:/github
+2. Copy the files to your directory of choice
+     The first 3 files are to get the calculation stared for the calculation of the effective 
+     sample size scalor (phi) using the method of McAlaster and Ianelli. The first two of the 
+     three files are updated during the iterative process
+        value_of_phi.dat
+        pred_prop_age_composition.dat
+        prop_age_composition.dat
+     The following two files are just to reset the values in the files above for a new run.
+        first_value_of_phi.dat
+        first_pred_prop_age_composition.dat 
+3. The "R" code determines the data for the model run. You must select a fishery here. At the top of the "R" code
+   you must also select whether you want the output to go to a .tif file.
+4. The "R" code then extracts the data for the fishery from the three .csv files for age, biomass, and catch
+   and writes them to the ADMB files .dat and .pin 
+5. Half way through the code, a .bat file is run which runs the model 7 times to calculate iterativerly phi and
+   save the run outputs (parameter values and gradienTS to a file output.dat  You need to check this and make sure 
+   the model converged.
+6. The last half of the code plots the outputs.
