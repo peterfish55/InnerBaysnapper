@@ -20,7 +20,7 @@ IGweight
 IGweight=IGweight[,'weight']
 IGweight
 
-maxwt <- ifelse(area=='eg', 6.1, ifelse(area=='nw', 6.5, 6.8))
+maxwt <- max(IGweight)
 corrwt <- ifelse(area=='eg', 6.0, ifelse(area=='nw', 5.5, 5.7))
 plot(1:31,IGweight,"o")
 IGweight[17]<-corrwt
